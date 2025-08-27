@@ -17,7 +17,7 @@ const BlogSection: React.FC = () => {
         const response = await fetch("https://dummyjson.com/posts");
         const data = await response.json();
 
-        const formatted = data.posts.slice(0, 6).map((post: any, index: number) => ({
+        const formatted = data.posts.slice(0, 6).map((post: any) => ({
           id: post.id,
           title: post.title,
           body: post.body,

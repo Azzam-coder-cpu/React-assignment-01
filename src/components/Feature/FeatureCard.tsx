@@ -4,12 +4,12 @@ interface FeatureCardProps {
     title: string;
     description: string;
 }
-const FeatureCard: FC<FeatureCardProps> = ({icon, title, text}) => {
+const FeatureCard: FC<FeatureCardProps> = ({icon, title, description}) => {
     return(
         <div>
             <div>{icon}</div>
             <h3>{title}</h3>
-            <p>{text}</p>
+            <p>{description}</p>
         </div>
     )
 }
