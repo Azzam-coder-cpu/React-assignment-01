@@ -1,13 +1,9 @@
 import './style.css';
+import { useState } from 'react';
 
 const Nav = () => {
+  const [menu, setMenu] = useState(false);
     return (
-     <html lang="en">
-     <head>
-        <title>Document</title>
-         {/* <link href="/src/components/Navbar/style.css" rel="stylesheet"></link> */}
-     </head>
-     <body>
          <nav className="border-gray-200 bg-white dark:bg-gray-900">
   <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
     <a
@@ -24,6 +20,7 @@ const Nav = () => {
       </span>
     </a>
     <button
+      onClick={() => setMenu(!menu)}
       data-collapse-toggle="navbar-default"
       type="button"
       className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -47,7 +44,7 @@ const Nav = () => {
         />
       </svg>
     </button>
-    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+    <div className={`${menu? 'block' : 'hidden'}w-full md:block md:w-auto`} id="navbar-default">
       <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900">
         <li>
           <a
@@ -94,8 +91,6 @@ const Nav = () => {
     </div>
   </div>
 </nav>
-     </body>
-     </html>
     )
 }
 
