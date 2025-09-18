@@ -6,10 +6,13 @@ import Contact from "../pages/Contact";
 import Services from "../pages/Services";
 import Pricing from "../pages/Pricing";
 const router = createBrowserRouter([
-    {
+      {
         path: '/',
         element : <AppLayout />,
         children: [
+             { path: '/',
+            element : <Home />
+            },
             {
             path: '/home',
             element : <Home />
