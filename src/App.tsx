@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import BlogSection from './components/BlogSection/BlofSection'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Navbar from './components/Navbar'
 function App() {
    return <>
    {/* <Nav/>
